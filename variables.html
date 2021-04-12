@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+
+    <style>
+        h1 {
+            color:black;
+            text-align:center;
+            font-family:'Courier New', monospace;
+            background-color:#65b36c;
+            position:fixed;
+            width: 100%;
+            height: 80px;
+            padding: 0;
+            margin: 0;
+        
+        }
+        body {
+            background-color:#f3d3b8;
+            margin: 0;
+            padding: 0;
+        }
+        #inputs {
+            position: relative;
+            top: 120px;
+            left: 50px;
+        }
+
+    </style>
+</head>
+
+<h1>Variables (var) adding interactivity</h1>
+
+<body> 
+    <div id="inputs">
+    
+    <input type="text" id="textinput">
+    <button id="textchanger">Input and click!</button>
+    <p id="changeparagraph">Here will appear your text</p>
+
+    <input type="text2" id="textinput2">
+    <button id="textchanger2">Input and click!</button>
+    <p>Your input value will appear in pup-up</p>
+
+    <script type="text/javascript">
+
+            var x = 3; 
+            x = 3;
+            alert (x);
+
+            var name = "Are you sure, Neo?"; 
+            alert (name);
+
+        document.getElementById("textchanger").onclick = function() {
+            var textEntered = "";
+            textEntered = document.getElementById("textinput").value;
+            document.getElementById("changeparagraph").innerHTML = textEntered;
+        }
+
+        document.getElementById("textchanger2").onclick = function() {
+            var textEntered = "";
+            textEntered = document.getElementById("textinput2").value;
+            alert(textEntered)
+        }
+
+    </script>
+    </div>
+</body>
+</html>
